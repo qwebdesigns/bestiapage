@@ -1,0 +1,111 @@
+*{
+    --speed_noice: 1s;
+    --min_bolt: 1vh;
+}
+
+.background {
+    width: 100vw;
+    height: 100svh;
+    position: absolute;
+    z-index: 20;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    
+    
+
+}
+.back_image{
+    border-radius: 5px;
+    width: 100vw;
+    height: 100svh;
+    object-fit: cover;
+    position: fixed;
+    clip-path: polygon(var(--min_bolt) var(--min_bolt), calc(100% - var(--min_bolt)) var(--min_bolt), calc(100% - var(--min_bolt)) calc(100% - var(--min_bolt)), var(--min_bolt) calc(100% - var(--min_bolt)));
+}
+
+.noise {
+    position: fixed;
+    z-index: 30;
+    width: 100vw;
+    height: 100svh;
+    pointer-events: none;
+    opacity: 0.25;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

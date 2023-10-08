@@ -1,0 +1,77 @@
+
+
+.radar {
+    width: 100vw;
+    height: 100svh;
+    background-color: gray;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.radar::before,
+.radar::after {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    content: '';
+    width: 100vw;
+    height: 100svh;
+    background-color: gray;
+    animation: anim-ramka-3 6s ease-in-out infinite;
+    z-index: 3;
+}
+
+.radar::before {
+    animation-delay: -3s;
+}
+.red_color::before,
+.red_color::after {
+    background-color: red;
+}
+
+.cyan_color::before,
+.cyan_color::after {
+    background-color: cyan;
+}
+
+.gray_color::before,
+.gray_color::after {
+    background-color: rgb(255, 255, 255);
+}
+@keyframes anim-ramka-3 {
+
+    /*
+        0%=Верхняя сторона экрана
+        25%=Левая сторона экрана 
+        50%=Нижняя сторона экрана 
+        75%=Правая сторона экрана
+    */
+    0%,
+    100% {
+        clip: rect(0px, 100vw, var(--min_bolt), 0px);
+    }
+
+    25% {
+        clip: rect(0px, var(--min_bolt), 100vh, 0px);
+    }
+
+    50% {
+        clip: rect(calc(100svh - var(--min_bolt)), 100vw, 100svh, 0px);
+    }
+
+    75% {
+        clip: rect(0px, 100vw, 100svh, calc(100vw - var(--min_bolt)));
+    }
+}
+
+.back_image_blur{
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 100svh;
+    object-fit: cover;
+    filter: blur(var(--min_bolt));
+}
